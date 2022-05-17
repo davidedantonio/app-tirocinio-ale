@@ -3,15 +3,15 @@
   "version": "1.0.0",
   "description": "Material UI app ",
   "scripts": {
-    "init:pwa": "node -r fs -e \"fs.rmSync('./pwa/node_modules', { recursive: true, force: true })\"",
+    "init:app": "node -r fs -e \"fs.rmSync('./app/node_modules', { recursive: true, force: true })\"",
     "init:api": "node -r fs -e \"fs.rmSync('./api/node_modules', { recursive: true, force: true })\"",
-    "install:pwa": "cd ./pwa && npm install",
+    "install:app": "cd ./app && npm install",
     "install:api": "cd ./api && npm install",
-    "install:all": "concurrently \"npm:install:api\" \"npm:install:pwa\"",
-    "init:all": "concurrently \"npm:init:api\" \"npm:init:pwa\"",
-    "start:pwa": "cd ./pwa && npm start",
+    "install:all": "concurrently \"npm:install:api\" \"npm:install:app\"",
+    "init:all": "concurrently \"npm:init:api\" \"npm:init:app\"",
+    "start:app": "cd ./app && npm start",
     "start:api": "cd ./api && npm run dev",
-    "start:all": "concurrently \"npm:start:api\" \"npm:start:pwa\""
+    "start:all": "concurrently \"npm:start:api\" \"npm:start:app\""
   },
   "license": "MIT",
   "dependencies": {
